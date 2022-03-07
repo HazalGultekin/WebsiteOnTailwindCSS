@@ -1,0 +1,27 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Tailwind'in resetini, componentlerini ,yardımcı sınıflarını yükler. */
+/* Bunun için kendimiz özel sınıflar falan yazarız. */
+
+@layer components{
+    .nav-link{
+        @apply inline-block mx-8 hover:text-white;
+    }
+    .modal{
+        @apply text-center mr-2 grid-cols-1;
+    }
+    .modal-content{
+        @apply w-full rounded border-solid  border-2 border-indigo-200;
+    }
+
+    .sidebar {
+        @apply w-full lg:w-64 bg-white dark:bg-gray-800 scale-90 lg:scale-100 absolute lg:relative inset-0 top-24 lg:top-0 opacity-0 lg:opacity-100 invisible lg:visible  flex-shrink-0 border-r p-3 flex flex-col border-gray-100 divide-gray-100 overflow-auto dark:border-gray-800 dark:divide-gray-800 transition-all;
+    }
+    .sidebar.active {
+        @apply  opacity-100 visible  z-10 scale-100;
+    }
+}
